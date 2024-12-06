@@ -59,10 +59,10 @@ for file in os.listdir(datapath):
             ti = title_list[row]
             counts += 1
             if counts > 0:
-                GPToutput = extract_high_entropy_elements(abstract, a)
-                a += 1
-                if a == 4:
-                    a = 1
+                GPToutput = extract_high_entropy_elements(abstract, ti)
+                # a += 1
+                # if a == 4:
+                #     a = 1
 
                 while GPToutput == "API time out":
                     time.sleep(20)
